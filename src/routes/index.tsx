@@ -166,8 +166,8 @@ function MindMap() {
     <svg className="mind-map" viewBox="0 0 1000 1000" role="img" aria-label="The BlueGreen journey puzzle mind map">
       {pieces.map((piece, i) => {
         const mid = i * 60 + 30;
-        const [tx, ty] = P(RT, mid).split(" ").map(Number);
-        const [ix, iy] = P(RT + 58, mid).split(" ").map(Number);
+        const [tx = 0, ty = 0] = P(RT, mid).split(" ").map(Number);
+        const [ix = 0, iy = 0] = P(RT + 58, mid).split(" ").map(Number);
         return (
           <g className="puzzle-piece" key={piece.title.join(" ")} style={{ color: piece.color }}>
             <path className="piece-outline" d={piecePath(i)} />
