@@ -5,6 +5,7 @@ import ecosystemImage from "../assets/bluegreen-ecosystem.jpg";
 import streamImage from "../assets/bluegreen-stream.jpg";
 import upcycleImage from "../assets/bluegreen-upcycle.jpg";
 import storyImage from "../assets/bluegreen-story.jpg";
+import logoWhite from "@/assets/logo-white.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -38,12 +39,8 @@ const nav = [
 
 function BrandMark() {
   return (
-    <span className="brand-mark" aria-hidden="true">
-      <svg viewBox="0 0 34 34">
-        <path d="M18 29C9 27 5 20 7 13c2-7 9-9 19-8-1 10-3 20-8 24Z" />
-        <path d="M8 25c5-7 10-11 18-17M15 17c-1-3-3-5-6-6M18 14c3 0 5 1 7 3" />
-      </svg>
-      <span>BlueGreen</span>
+    <span className="brand-mark">
+      <img src={logoWhite.url} alt="BlueGreen logo" width={897} height={310} />
     </span>
   );
 }

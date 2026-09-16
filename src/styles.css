@@ -79,8 +79,8 @@ main { overflow: clip; }
   backdrop-filter: blur(14px);
 }
 .brand-link { min-width: 0; }
-.brand-mark { display: inline-flex; align-items: center; gap: .55rem; font-family: var(--font-display); font-size: 1.35rem; font-weight: 600; }
-.brand-mark svg { width: 1.65rem; height: 1.65rem; fill: none; stroke: currentColor; stroke-width: 1.4; }
+.brand-mark { display: inline-flex; align-items: center; }
+.brand-mark img { height: 2.6rem; width: auto; display: block; }
 .site-nav nav { display: flex; align-items: center; gap: clamp(.8rem, 2vw, 2.2rem); }
 .site-nav nav a { font-size: .66rem; text-transform: uppercase; letter-spacing: .12em; opacity: .8; transition: opacity .25s ease; }
 .site-nav nav a:hover { opacity: 1; }
@@ -173,8 +173,7 @@ p.lead { margin: 0 0 1.2rem; font-family: var(--font-display); font-size: clamp(
 
 @media (max-width: 760px) {
   .site-nav { grid-template-columns: 1fr; gap: .65rem; padding: .7rem 1rem .55rem; }
-  .brand-mark { font-size: 1.1rem; }
-  .brand-mark svg { width: 1.35rem; height: 1.35rem; }
+  .brand-mark img { height: 2rem; }
   .site-nav nav { width: 100%; gap: 1.15rem; overflow-x: auto; scrollbar-width: none; padding-bottom: .1rem; }
   .site-nav nav::-webkit-scrollbar { display: none; }
   .site-nav nav a { flex: 0 0 auto; font-size: .56rem; }
