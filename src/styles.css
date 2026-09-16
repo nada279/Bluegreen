@@ -106,7 +106,7 @@ main { overflow: clip; }
 .cream-section { background: var(--cream); }
 .journey-section { min-height: 100svh; display: grid; grid-template-columns: minmax(0, 1.08fr) minmax(380px, .92fr); }
 .journey-image { position: relative; min-height: 720px; overflow: hidden; }
-.journey-image img, .logic-image img, .wonder-image img { width: 100%; height: 100%; object-fit: cover; transition: transform 1.6s cubic-bezier(.2,.7,.2,1); }
+.journey-image > img:first-child, .logic-image > img:first-child, .wonder-image > img:first-child { width: 100%; height: 100%; object-fit: cover; transition: transform 1.6s cubic-bezier(.2,.7,.2,1); }
 .journey-image.is-visible img, .logic-image.is-visible img, .wonder-image.is-visible img { transform: scale(1.025); }
 .journey-image .doodle { right: 5%; bottom: 8%; width: 48%; }
 .journey-copy, .logic-copy, .wonder-copy { display: flex; flex-direction: column; justify-content: center; padding: clamp(4.5rem, 9vw, 10rem) clamp(2rem, 7vw, 8rem); }
@@ -126,6 +126,14 @@ p.lead { margin: 0 0 1.2rem; font-family: var(--font-display); font-size: clamp(
 .doodle path, .doodle circle { stroke-dasharray: 1200; stroke-dashoffset: 1200; transition: stroke-dashoffset 2.4s ease .3s; }
 .is-visible .doodle path, .is-visible .doodle circle, section:has(.is-visible) > .doodle path, section:has(.is-visible) > .doodle circle { stroke-dashoffset: 0; }
 .play-section > .doodle { right: 6vw; bottom: 6vh; width: min(29vw, 390px); opacity: .8; }
+
+.stick-figure { position: absolute; z-index: 4; width: clamp(9rem, 16vw, 15rem); height: auto; object-fit: contain; pointer-events: none; filter: drop-shadow(0 .7rem 1.1rem color-mix(in oklab, var(--forest) 35%, transparent)); }
+.journey-image .stick-reader { right: 4%; bottom: 3%; }
+.play-section .stick-runner { right: 7%; bottom: 4%; }
+.logic-image .stick-thinker { left: 5%; bottom: 3%; }
+.melody-section .stick-musician { right: 6%; bottom: 5%; }
+.wonder-image .stick-recycler { right: 5%; bottom: 2%; }
+.story-section .story-reader { right: 7%; bottom: 4%; }
 
 .logic-section { min-height: 92svh; display: grid; grid-template-columns: .82fr 1.18fr; }
 .logic-image { position: relative; overflow: hidden; }
@@ -166,15 +174,6 @@ p.lead { margin: 0 0 1.2rem; font-family: var(--font-display); font-size: clamp(
 .mindmap-visual.is-visible .puzzle-piece:nth-of-type(6) * { transition-delay: .9s; }
 
 
-.contact-section { min-height: 68svh; display: grid; grid-template-columns: 1fr 1fr; align-content: center; gap: 5rem; padding: 9rem 7vw 5rem; background: var(--cream); border-top: 1px solid var(--border); }
-.contact-section h2 { margin: 0; }
-.contact-grid { display: grid; grid-template-columns: 1fr 1fr; align-content: center; gap: 0; border-top: 1px solid var(--border); }
-.contact-grid span { display: flex; justify-content: space-between; padding: 1.6rem 0; border-bottom: 1px solid var(--border); font-size: .72rem; text-transform: uppercase; letter-spacing: .12em; }
-.contact-grid span:nth-child(odd) { padding-right: 1.5rem; }
-.contact-grid span:nth-child(even) { padding-left: 1.5rem; border-left: 1px solid var(--border); }
-.contact-grid b { font-weight: 400; }
-.back-top { grid-column: 1 / -1; justify-self: end; font-size: .68rem; text-transform: uppercase; letter-spacing: .13em; }
-
 .reveal { opacity: 0; transform: translateY(28px); transition: opacity .9s ease, transform .9s ease; }
 .reveal.is-visible { opacity: 1; transform: translateY(0); }
 
@@ -202,6 +201,9 @@ p.lead { margin: 0 0 1.2rem; font-family: var(--font-display); font-size: clamp(
   .chapter-copy { padding: 7rem 1.35rem 3.5rem; }
   .chapter-copy h2 { font-size: clamp(4rem, 19vw, 6rem); }
   .play-section > .doodle { width: 55vw; right: -4vw; top: 18%; bottom: auto; }
+  .stick-figure { width: clamp(7.5rem, 34vw, 11rem); }
+  .journey-image .stick-reader, .logic-image .stick-thinker, .wonder-image .stick-recycler { right: 3%; left: auto; bottom: 2%; }
+  .play-section .stick-runner, .melody-section .stick-musician, .story-section .story-reader { right: 3%; bottom: 3%; }
   .melody-section > .doodle { width: 74vw; right: -8%; top: 16%; }
   .story-section { min-height: 95svh; }
   .story-section > .doodle { width: 58vw; right: -4vw; top: 17%; }
@@ -212,9 +214,6 @@ p.lead { margin: 0 0 1.2rem; font-family: var(--font-display); font-size: clamp(
   .mindmap-visual { width: 128%; margin-left: -14%; margin-top: 1.5rem; }
   .mind-map .piece-title { font-size: 25px; }
   .mind-map .piece-text { font-size: 16px; }
-  .contact-section { grid-template-columns: 1fr; gap: 3rem; padding: 6rem 1.25rem 3rem; }
-  .contact-grid { grid-template-columns: 1fr; }
-  .contact-grid span:nth-child(odd), .contact-grid span:nth-child(even) { padding: 1.3rem 0; border-left: 0; }
 }
 
 @media (prefers-reduced-motion: reduce) {
