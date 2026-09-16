@@ -5,6 +5,7 @@ import ecosystemImage from "../assets/bluegreen-ecosystem.jpg";
 import streamImage from "../assets/bluegreen-stream.jpg";
 import upcycleImage from "../assets/bluegreen-upcycle.jpg";
 import storyImage from "../assets/bluegreen-story.jpg";
+import logoWhite from "@/assets/logo-white.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({

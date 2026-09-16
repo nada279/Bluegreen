@@ -79,8 +79,8 @@ main { overflow: clip; }
   backdrop-filter: blur(14px);
 }
 .brand-link { min-width: 0; }
-.brand-mark { display: inline-flex; align-items: center; gap: .55rem; font-family: var(--font-display); font-size: 1.35rem; font-weight: 600; }
-.brand-mark svg { width: 1.65rem; height: 1.65rem; fill: none; stroke: currentColor; stroke-width: 1.4; }
+.brand-mark { display: inline-flex; align-items: center; }
+.brand-mark img { height: 2.6rem; width: auto; display: block; }
 .site-nav nav { display: flex; align-items: center; gap: clamp(.8rem, 2vw, 2.2rem); }
 .site-nav nav a { font-size: .66rem; text-transform: uppercase; letter-spacing: .12em; opacity: .8; transition: opacity .25s ease; }
 .site-nav nav a:hover { opacity: 1; }
