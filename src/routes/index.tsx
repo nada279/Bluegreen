@@ -121,40 +121,40 @@ const piecePath = (i: number) => {
   ].join(" ");
 };
 
-const pieces: Array<{ title: string[]; text: string; icon: string; color: string }> = [
+const pieces: Array<{ title: string[]; text: string[]; icon: string; color: string }> = [
   {
     title: ["Environmental", "Journey"],
-    text: "A cinematic walk through living landscapes.",
+    text: ["A cinematic walk", "through living", "landscapes."],
     color: "var(--puzzle-1)",
     icon: "M-16 12c0-16 12-26 30-26-2 18-12 28-30 26Zm0 0 22-20",
   },
   {
     title: ["Eco", "Logic"],
-    text: "Thinking in systems, patterns and balance.",
+    text: ["Thinking in systems,", "patterns and", "balance."],
     color: "var(--puzzle-2)",
     icon: "M-14 14v-18a14 14 0 0 1 28 0v18M-14 2h28M0-18v34",
   },
   {
     title: ["Eco", "Melody"],
-    text: "Listening to the rhythm of the natural world.",
+    text: ["Listening to the", "rhythm of the", "natural world."],
     color: "var(--puzzle-3)",
     icon: "M-6 14a7 7 0 1 0 0-2v-28l20-6v26a7 7 0 1 0 0-2",
   },
   {
     title: ["Waste", "Wonder"],
-    text: "Turning discarded things into new value.",
+    text: ["Turning discarded", "things into", "new value."],
     color: "var(--puzzle-4)",
     icon: "M-16 6 -8-8 4-8m12 14L8 20h-14m0-26L-16 6l6 10m24-16 8 12-6 10M-6 20l6-8m-6 8 6 8",
   },
   {
     title: ["Planet", "Story"],
-    text: "Voices weaving a shared, hopeful vision.",
+    text: ["Voices weaving a", "shared, hopeful", "vision."],
     color: "var(--puzzle-5)",
     icon: "M-18-12h16a6 6 0 0 1 2 5v19a6 6 0 0 0-2-4h-16Zm36 0H2a6 6 0 0 0-2 5v19a6 6 0 0 1 2-4h16Z",
   },
   {
     title: ["Play", "Sustainability"],
-    text: "Learning the planet through play and curiosity.",
+    text: ["Learning the planet", "through play", "and curiosity."],
     color: "var(--puzzle-6)",
     icon: "M0-16a16 16 0 1 0 0 32 16 16 0 0 0 0-32Zm0 6 10 8-4 12h-12l-4-12Z",
   },
@@ -167,22 +167,24 @@ function MindMap() {
       {pieces.map((piece, i) => {
         const mid = i * 60 + 30;
         const [tx = 0, ty = 0] = P(RT, mid).split(" ").map(Number);
-        const [ix = 0, iy = 0] = P(RT + 58, mid).split(" ").map(Number);
+        const [ix = 0, iy = 0] = P(RT - 66, mid).split(" ").map(Number);
         return (
           <g className="puzzle-piece" key={piece.title.join(" ")} style={{ color: piece.color }}>
             <path className="piece-outline" d={piecePath(i)} />
             <g className="piece-icon" transform={`translate(${ix} ${iy})`}>
               <path d={piece.icon} />
             </g>
-            <text x={tx} y={ty - 16} className="piece-title">
+            <text x={tx} y={ty - 22} className="piece-title">
               {piece.title[0]}
             </text>
-            <text x={tx} y={ty + 8} className="piece-title">
+            <text x={tx} y={ty + 2} className="piece-title">
               {piece.title[1]}
             </text>
-            <text x={tx} y={ty + 34} className="piece-text">
-              {piece.text}
-            </text>
+            {piece.text.map((line, n) => (
+              <text key={line} x={tx} y={ty + 28 + n * 19} className="piece-text">
+                {line}
+              </text>
+            ))}
           </g>
         );
       })}
