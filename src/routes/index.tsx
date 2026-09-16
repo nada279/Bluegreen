@@ -89,33 +89,110 @@ function Doodle({ kind = "nature" }: { kind?: "nature" | "music" | "cycle" | "st
   );
 }
 
+const C = 500;
+const RI = 232;
+const RO = 400;
+const GAP = 3.2;
+
+const P = (r: number, deg: number) => {
+  const a = ((deg - 90) * Math.PI) / 180;
+  return `${(C + r * Math.cos(a)).toFixed(1)} ${(C + r * Math.sin(a)).toFixed(1)}`;
+};
+
+const RM = (RI + RO) / 2;
+const LOBE = 30;
+const LOBE_DEG = (46 / RM) * (180 / Math.PI);
+
+// radial edge from inner to outer at angle `a`, with a puzzle lobe bulging toward a - LOBE_DEG
+const edgeOut = (a: number) =>
+  `L ${P(RM - LOBE, a)} C ${P(RM - LOBE, a - LOBE_DEG)} ${P(RM + LOBE, a - LOBE_DEG)} ${P(RM + LOBE, a)} L ${P(RO, a)}`;
+const edgeIn = (a: number) =>
+  `L ${P(RM + LOBE, a)} C ${P(RM + LOBE, a - LOBE_DEG)} ${P(RM - LOBE, a - LOBE_DEG)} ${P(RM - LOBE, a)} L ${P(RI, a)}`;
+
+const piecePath = (i: number) => {
+  const a0 = i * 60 + GAP;
+  const a1 = (i + 1) * 60 - GAP;
+  return [
+    `M ${P(RI, a0)}`,
+    edgeOut(a0),
+    `A ${RO} ${RO} 0 0 1 ${P(RO, a1)}`,
+    edgeIn(a1),
+    `A ${RI} ${RI} 0 0 0 ${P(RI, a0)}`,
+  ].join(" ");
+};
+
+const pieces: Array<{ title: string[]; text: string; icon: string; color: string }> = [
+  {
+    title: ["Environmental", "Journey"],
+    text: "A cinematic walk through living landscapes.",
+    color: "var(--puzzle-1)",
+    icon: "M-16 12c0-16 12-26 30-26-2 18-12 28-30 26Zm0 0 22-20",
+  },
+  {
+    title: ["Eco", "Logic"],
+    text: "Thinking in systems, patterns and balance.",
+    color: "var(--puzzle-2)",
+    icon: "M-14 14v-18a14 14 0 0 1 28 0v18M-14 2h28M0-18v34",
+  },
+  {
+    title: ["Eco", "Melody"],
+    text: "Listening to the rhythm of the natural world.",
+    color: "var(--puzzle-3)",
+    icon: "M-6 14a7 7 0 1 0 0-2v-28l20-6v26a7 7 0 1 0 0-2",
+  },
+  {
+    title: ["Waste", "Wonder"],
+    text: "Turning discarded things into new value.",
+    color: "var(--puzzle-4)",
+    icon: "M-16 6 -8-8 4-8m12 14L8 20h-14m0-26L-16 6l6 10m24-16 8 12-6 10M-6 20l6-8m-6 8 6 8",
+  },
+  {
+    title: ["Planet", "Story"],
+    text: "Voices weaving a shared, hopeful vision.",
+    color: "var(--puzzle-5)",
+    icon: "M-18-12h16a6 6 0 0 1 2 5v19a6 6 0 0 0-2-4h-16Zm36 0H2a6 6 0 0 0-2 5v19a6 6 0 0 1 2-4h16Z",
+  },
+  {
+    title: ["Play", "Sustainability"],
+    text: "Learning the planet through play and curiosity.",
+    color: "var(--puzzle-6)",
+    icon: "M0-16a16 16 0 1 0 0 32 16 16 0 0 0 0-32Zm0 6 10 8-4 12h-12l-4-12Z",
+  },
+];
+
 function MindMap() {
+  const RT = (RI + RO) / 2 + 4;
   return (
-    <svg className="mind-map" viewBox="0 0 1000 650" role="img" aria-label="The BlueGreen journey mind map">
-      <g className="map-lines">
-        <path d="M500 324C388 244 312 177 198 123" />
-        <path d="M500 324C374 318 264 311 124 328" />
-        <path d="M500 324C388 414 309 482 194 526" />
-        <path d="M500 324C610 242 687 177 806 122" />
-        <path d="M500 324C626 318 738 307 875 329" />
-        <path d="M500 324C613 414 691 484 808 526" />
-      </g>
-      <g className="map-earth">
-        <circle cx="500" cy="324" r="108" />
-        <ellipse cx="500" cy="324" rx="160" ry="124" />
-        <path d="M451 237c-18 23-14 41 12 55l-16 29 26 28-7 56 32 25m33-192-14 31 30 22-5 37 24 26-18 54m-128-63c36 8 68 6 98-5m-91-38c45-5 84-3 122 8" />
-      </g>
-      <g className="map-node"><circle cx="172" cy="110" r="56" /><text x="172" y="105">Play</text><text x="172" y="127">Sustainability</text><path d="M155 75c13-14 28-14 41 0-14 12-28 12-41 0Z" /></g>
-      <g className="map-node"><circle cx="105" cy="338" r="56" /><text x="105" y="333">Eco</text><text x="105" y="355">Logic</text><path d="M88 301c13-20 27-20 40 0M108 282v21" /></g>
-      <g className="map-node"><circle cx="171" cy="547" r="56" /><text x="171" y="542">Eco</text><text x="171" y="564">Melody</text><path d="M151 508v30c0 9-16 10-16 1s10-11 16-7l19-7v-27" /></g>
-      <g className="map-node"><circle cx="827" cy="109" r="56" /><text x="827" y="104">Waste</text><text x="827" y="126">Wonder</text><path d="M812 72l15-10 12 14m6 0-1 18-18 1" /></g>
-      <g className="map-node"><circle cx="895" cy="338" r="56" /><text x="895" y="333">Planet</text><text x="895" y="355">Story</text><path d="M875 296h40v27c-13-6-27-6-40 0v-27Z" /></g>
-      <g className="map-node"><circle cx="829" cy="547" r="56" /><text x="829" y="542">The</text><text x="829" y="564">Journey</text><path d="M812 504c0-18 29-18 29 0 0 10-7 13-10 21h-9c-3-8-10-11-10-21Z" /></g>
-      <text className="earth-label" x="500" y="318">BLUE</text>
-      <text className="earth-label" x="500" y="350">GREEN</text>
+    <svg className="mind-map" viewBox="0 0 1000 1000" role="img" aria-label="The BlueGreen journey puzzle mind map">
+      {pieces.map((piece, i) => {
+        const mid = i * 60 + 30;
+        const [tx, ty] = P(RT, mid).split(" ").map(Number);
+        const [ix, iy] = P(RT + 58, mid).split(" ").map(Number);
+        return (
+          <g className="puzzle-piece" key={piece.title.join(" ")} style={{ color: piece.color }}>
+            <path className="piece-outline" d={piecePath(i)} />
+            <g className="piece-icon" transform={`translate(${ix} ${iy})`}>
+              <path d={piece.icon} />
+            </g>
+            <text x={tx} y={ty - 16} className="piece-title">
+              {piece.title[0]}
+            </text>
+            <text x={tx} y={ty + 8} className="piece-title">
+              {piece.title[1]}
+            </text>
+            <text x={tx} y={ty + 34} className="piece-text">
+              {piece.text}
+            </text>
+          </g>
+        );
+      })}
+      <text className="earth-label" x="500" y="488">BLUE</text>
+      <text className="earth-label" x="500" y="528">GREEN</text>
+      <text className="piece-text" x="500" y="562">one living ecosystem</text>
     </svg>
   );
 }
+
 
 function Index() {
   useEffect(() => {
