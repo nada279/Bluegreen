@@ -8,11 +8,6 @@ import coastImage from "@/assets/bluegreen-coast.png.asset.json";
 import seedlingsImage from "@/assets/bluegreen-seedlings.webp.asset.json";
 import ecosystemMapImage from "@/assets/bluegreen-ecosystem-map.png.asset.json";
 import riverImage from "@/assets/bluegreen-river.png.asset.json";
-import stickReader from "@/assets/stick-reader.png.asset.json";
-import stickRunner from "@/assets/stick-runner.png.asset.json";
-import stickThinker from "@/assets/stick-thinker.png.asset.json";
-import stickMusician from "@/assets/stick-musician.png.asset.json";
-import stickRecycler from "@/assets/stick-recycler.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -237,7 +232,6 @@ function Index() {
         <div className="journey-image reveal">
           <img src={riverImage.url} alt="A clear river flowing through a green mountain landscape" loading="lazy" width={1365} height={768} />
           <Doodle kind="nature" />
-          <img className="stick-figure stick-reader" src={stickReader.url} alt="Child reading about nature" loading="lazy" />
         </div>
         <div className="journey-copy reveal">
           <p className="section-number">01 / The beginning</p>
@@ -251,7 +245,6 @@ function Index() {
       <section id="play" className="image-chapter play-section">
         <img src={ecosystemMapImage.url} alt="Forest ecosystem with hand-drawn water, sun and growth connections" loading="lazy" width={1778} height={768} />
         <div className="image-shade" />
-        <img className="stick-figure stick-runner" src={stickRunner.url} alt="Child exploring nature through play" loading="lazy" />
         <div className="chapter-copy reveal">
           <p className="section-number light">02 / Play</p>
           <h2>Play<br /><em>Sustainability</em></h2>
@@ -269,7 +262,6 @@ function Index() {
         <div className="logic-image reveal">
           <img src={seedlingsImage.url} alt="Young plants growing across a mossy forest floor" loading="lazy" width={1778} height={768} />
           <Doodle kind="nature" />
-          <img className="stick-figure stick-thinker" src={stickThinker.url} alt="Child thinking about nature" loading="lazy" />
         </div>
       </section>
 
@@ -277,7 +269,6 @@ function Index() {
         <img src={streamImage} alt="A clear stream flowing through a mossy forest" loading="lazy" width={1600} height={1008} />
         <div className="image-shade" />
         <Doodle kind="music" />
-        <img className="stick-figure stick-musician" src={stickMusician.url} alt="Child making music for nature" loading="lazy" />
         <div className="chapter-copy reveal">
           <p className="section-number light">04 / Listen closely</p>
           <h2>Eco <em>Melody</em></h2>
@@ -295,7 +286,6 @@ function Index() {
         </div>
         <div className="wonder-image reveal">
           <img src={upcycleImage} alt="Natural materials transformed into useful objects" loading="lazy" width={1600} height={1200} />
-          <img className="stick-figure stick-recycler" src={stickRecycler.url} alt="Child recycling materials" loading="lazy" />
         </div>
       </section>
 
@@ -303,7 +293,6 @@ function Index() {
         <img src={storyImage} alt="Sunlight and a waterfall along a path through an ancient forest" loading="lazy" width={1200} height={1600} />
         <div className="image-shade" />
         <Doodle kind="story" />
-        <img className="stick-figure stick-reader story-reader" src={stickReader.url} alt="Child reading the planet's story" loading="lazy" />
         <div className="story-copy reveal">
           <p className="section-number light">06 / Share the vision</p>
           <h2>Planet <em>Story</em></h2>
@@ -319,6 +308,19 @@ function Index() {
         </div>
         <div className="mindmap-visual reveal"><MindMap /></div>
       </section>
+
+      <footer className="closing-section">
+        <img src={coastImage.url} alt="Quiet water and green land beneath a sunlit sky" loading="lazy" width={1024} height={768} />
+        <div className="closing-shade" />
+        <div className="closing-content reveal">
+          <blockquote>
+            <span>Understand the system.</span>
+            <span>Rethink the habit.</span>
+            <em>Transform the future.</em>
+          </blockquote>
+          <img className="closing-logo" src={logoWhite.url} alt="BlueGreen" width={897} height={310} />
+        </div>
+      </footer>
 
     </main>
   );
