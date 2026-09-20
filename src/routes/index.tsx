@@ -91,109 +91,52 @@ function Doodle({ kind = "nature" }: { kind?: "nature" | "music" | "cycle" | "st
   );
 }
 
-const C = 500;
-const RI = 232;
-const RO = 400;
-const GAP = 3.2;
-
-const P = (r: number, deg: number) => {
-  const a = ((deg - 90) * Math.PI) / 180;
-  return `${(C + r * Math.cos(a)).toFixed(1)} ${(C + r * Math.sin(a)).toFixed(1)}`;
-};
-
-const RM = (RI + RO) / 2;
-const LOBE = 30;
-const LOBE_DEG = (46 / RM) * (180 / Math.PI);
-
-// radial edge from inner to outer at angle `a`, with a puzzle lobe bulging toward a - LOBE_DEG
-const edgeOut = (a: number) =>
-  `L ${P(RM - LOBE, a)} C ${P(RM - LOBE, a - LOBE_DEG)} ${P(RM + LOBE, a - LOBE_DEG)} ${P(RM + LOBE, a)} L ${P(RO, a)}`;
-const edgeIn = (a: number) =>
-  `L ${P(RM + LOBE, a)} C ${P(RM + LOBE, a - LOBE_DEG)} ${P(RM - LOBE, a - LOBE_DEG)} ${P(RM - LOBE, a)} L ${P(RI, a)}`;
-
-const piecePath = (i: number) => {
-  const a0 = i * 60 + GAP;
-  const a1 = (i + 1) * 60 - GAP;
-  return [
-    `M ${P(RI, a0)}`,
-    edgeOut(a0),
-    `A ${RO} ${RO} 0 0 1 ${P(RO, a1)}`,
-    edgeIn(a1),
-    `A ${RI} ${RI} 0 0 0 ${P(RI, a0)}`,
-  ].join(" ");
-};
-
-const pieces: Array<{ title: string[]; text: string[]; icon: string; color: string }> = [
-  {
-    title: ["Environmental", "Journey"],
-    text: ["A cinematic walk", "through living", "landscapes."],
-    color: "var(--puzzle-1)",
-    icon: "M-16 12c0-16 12-26 30-26-2 18-12 28-30 26Zm0 0 22-20",
-  },
-  {
-    title: ["Eco", "Logic"],
-    text: ["Thinking in systems,", "patterns and", "balance."],
-    color: "var(--puzzle-2)",
-    icon: "M-14 14v-18a14 14 0 0 1 28 0v18M-14 2h28M0-18v34",
-  },
-  {
-    title: ["Eco", "Melody"],
-    text: ["Listening to the", "rhythm of the", "natural world."],
-    color: "var(--puzzle-3)",
-    icon: "M-6 14a7 7 0 1 0 0-2v-28l20-6v26a7 7 0 1 0 0-2",
-  },
-  {
-    title: ["Waste", "Wonder"],
-    text: ["Turning discarded", "things into", "new value."],
-    color: "var(--puzzle-4)",
-    icon: "M-16 6 -8-8 4-8m12 14L8 20h-14m0-26L-16 6l6 10m24-16 8 12-6 10M-6 20l6-8m-6 8 6 8",
-  },
-  {
-    title: ["Planet", "Story"],
-    text: ["Voices weaving a", "shared, hopeful", "vision."],
-    color: "var(--puzzle-5)",
-    icon: "M-18-12h16a6 6 0 0 1 2 5v19a6 6 0 0 0-2-4h-16Zm36 0H2a6 6 0 0 0-2 5v19a6 6 0 0 1 2-4h16Z",
-  },
-  {
-    title: ["Play", "Sustainability"],
-    text: ["Learning the planet", "through play", "and curiosity."],
-    color: "var(--puzzle-6)",
-    icon: "M0-16a16 16 0 1 0 0 32 16 16 0 0 0 0-32Zm0 6 10 8-4 12h-12l-4-12Z",
-  },
-];
-
 function MindMap() {
-  const RT = (RI + RO) / 2 + 4;
   return (
-    <svg className="mind-map" viewBox="0 0 1000 1000" role="img" aria-label="The BlueGreen journey puzzle mind map">
-      {pieces.map((piece, i) => {
-        const mid = i * 60 + 30;
-        const side = i < 3 ? 1 : -1;
-        const [tx = 0, ty = 0] = P(RT, mid - side * 5).split(" ").map(Number);
-        const [ix = 0, iy = 0] = P(RT + 2, mid + side * 21).split(" ").map(Number);
-        return (
-          <g className="puzzle-piece" key={piece.title.join(" ")} style={{ color: piece.color }}>
-            <path className="piece-outline" d={piecePath(i)} />
-            <g className="piece-icon" transform={`translate(${ix} ${iy})`}>
-              <path d={piece.icon} />
-            </g>
-            <text x={tx} y={ty - 22} className="piece-title">
-              {piece.title[0]}
-            </text>
-            <text x={tx} y={ty + 2} className="piece-title">
-              {piece.title[1]}
-            </text>
-            {piece.text.map((line, n) => (
-              <text key={line} x={tx} y={ty + 28 + n * 19} className="piece-text">
-                {line}
-              </text>
-            ))}
-          </g>
-        );
-      })}
-      <text className="earth-label" x="500" y="488">BLUE</text>
-      <text className="earth-label" x="500" y="528">GREEN</text>
-      <text className="piece-text" x="500" y="562">one living ecosystem</text>
+    <svg className="mind-map" viewBox="0 0 1200 650" role="img" aria-label="BlueGreen sustainable future infinity diagram">
+      <defs>
+        <marker id="arrow-green" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0 0 8 3 0 6Z" /></marker>
+        <marker id="arrow-blue" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0 0 8 3 0 6Z" /></marker>
+      </defs>
+      <g className="infinity-loop infinity-loop-green">
+        <path className="loop-outline" d="M600 325C510 205 430 65 235 65 80 65 50 260 165 325 50 390 80 585 235 585c195 0 275-140 365-260" />
+        <path className="loop-arrow" markerEnd="url(#arrow-green)" d="M575 300C480 190 410 100 240 100 125 100 105 245 180 290" />
+        <path className="loop-arrow" markerEnd="url(#arrow-green)" d="M180 360c-75 45-55 190 60 190 170 0 240-90 335-200" />
+      </g>
+      <g className="infinity-loop infinity-loop-blue">
+        <path className="loop-outline" d="M600 325C690 205 770 65 965 65c155 0 185 195 70 260 115 65 85 260-70 260-195 0-275-140-365-260" />
+        <path className="loop-arrow" markerEnd="url(#arrow-blue)" d="M625 300c95-110 165-200 335-200 115 0 135 145 60 190" />
+        <path className="loop-arrow" markerEnd="url(#arrow-blue)" d="M1020 360c75 45 55 190-60 190-170 0-240-90-335-200" />
+      </g>
+
+      <g className="infinity-topic topic-education" tabIndex={0} role="button" aria-label="Environmental Education: Learn, Explore, Act">
+        <g className="topic-icon" transform="translate(330 180)"><path d="M-43-22v58c30-8 44 7 44 7s14-15 44-7v-58C18-27 1-12 1-12S-18-27-43-22Zm44 10v55M-32-10c15-2 24 4 24 4m-24 13c15-2 24 4 24 4m16-17c9-6 18-6 27-4M8 11c9-6 18-6 27-4M-8-30c-9-20-28-19-28-19 0 21 17 27 28 19Zm9 0c10-25 34-26 34-26 0 25-19 34-34 26Z" /></g>
+        <text className="topic-title" x="330" y="250"><tspan x="330">Environmental</tspan><tspan x="330" dy="30">Education</tspan></text>
+        <text className="topic-tag" x="330" y="326">LEARN · EXPLORE · ACT</text>
+      </g>
+      <g className="infinity-topic topic-business" tabIndex={0} role="button" aria-label="Green Business and Entrepreneurship: Innovate, Create, Scale">
+        <g className="topic-icon" transform="translate(870 180)"><path d="M-43-18h86v55h-86Zm0 15h86M-22-18v-11h44v11M0-3c0 0-22-27-22-47 22 1 30 22 22 47Zm0 0c0 0 25-17 39-38-22-5-38 13-39 38ZM0-3v30" /></g>
+        <text className="topic-title" x="870" y="250"><tspan x="870">Green Business &amp;</tspan><tspan x="870" dy="30">Entrepreneurship</tspan></text>
+        <text className="topic-tag" x="870" y="326">INNOVATE · CREATE · SCALE</text>
+      </g>
+      <g className="infinity-topic topic-upcycling" tabIndex={0} role="button" aria-label="Upcycling and Recycling: Reduce, Reuse, Reimagine">
+        <g className="topic-icon" transform="translate(330 425)"><path d="M-22-33 0-48l18 31M0-48l8 18m10 13 22 38-18 28M40 21 20 19M22 49h-47l-18-31m18 31 10-17M-43 18l22-38h37m-37 0 11 15M18 20c4-27 20-40 39-43-1 25-15 42-39 43Zm0 0L48-13" /></g>
+        <text className="topic-title" x="330" y="490"><tspan x="330">Upcycling &amp;</tspan><tspan x="330" dy="30">Recycling</tspan></text>
+        <text className="topic-tag" x="330" y="566">REDUCE · REUSE · REIMAGINE</text>
+      </g>
+      <g className="infinity-topic topic-products" tabIndex={0} role="button" aria-label="Environmental Products: Design, Produce, Impact">
+        <g className="topic-icon" transform="translate(870 425)"><path d="M-48-14 0-35l48 21L0 8Zm0 0v50L0 58l48-22v-50M0 8v50M-48-14l22 17L0-17 26 3l22-17M0-35c0 0-20-21-18-40 20 3 26 22 18 40Zm0 0c3-22 20-38 40-39-2 23-19 37-40 39Z" /></g>
+        <text className="topic-title" x="870" y="490"><tspan x="870">Environmental</tspan><tspan x="870" dy="30">Products</tspan></text>
+        <text className="topic-tag" x="870" y="566">DESIGN · PRODUCE · IMPACT</text>
+      </g>
+
+      <g className="infinity-center">
+        <circle cx="600" cy="325" r="91" />
+        <circle cx="600" cy="325" r="76" />
+        <path className="globe" d="M600 252a42 42 0 1 0 0 84 42 42 0 0 0 0-84Zm-39 42h78M600 252c-21 18-21 66 0 84m0-84c21 18 21 66 0 84M571 270c20 10 39 10 58 0m-58 48c20-10 39-10 58 0" />
+        <path className="center-leaf" d="M551 340c-22-22-12-43 10-53 12 23 6 40-10 53Zm98 0c22-22 12-43-10-53-12 23-6 40 10 53Z" />
+        <text className="center-title" x="600" y="363"><tspan x="600">Sustainable</tspan><tspan x="600" dy="27">Future</tspan></text>
+      </g>
     </svg>
   );
 }
@@ -202,7 +145,13 @@ function MindMap() {
 function Index() {
   useEffect(() => {
     const observer = new IntersectionObserver(
-      (entries) => entries.forEach((entry) => entry.isIntersecting && entry.target.classList.add("is-visible")),
+      (entries) => entries.forEach((entry) => {
+        if (entry.target.classList.contains("mindmap-visual")) {
+          entry.target.classList.toggle("is-visible", entry.isIntersecting);
+        } else if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+        }
+      }),
       { threshold: 0.16 },
     );
     document.querySelectorAll(".reveal").forEach((element) => observer.observe(element));
