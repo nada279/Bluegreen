@@ -155,11 +155,13 @@ p.lead { margin: 0 0 1.2rem; font-family: var(--font-display); font-size: clamp(
 .loop-outline, .loop-arrow { stroke-dasharray: 1800; stroke-dashoffset: 1800; }
 .loop-outline { stroke-width: 4; }
 .loop-arrow { stroke-width: 2.5; }
+.loop-pulse { stroke: color-mix(in oklab, currentColor 55%, transparent); stroke-width: 6; stroke-dasharray: 80 1720; stroke-dashoffset: 1800; opacity: 0; pointer-events: none; }
 .infinity-loop marker path { fill: currentColor; stroke: none; }
 .infinity-loop-green marker path { fill: var(--moss); }
 .infinity-loop-blue marker path { fill: var(--puzzle-2); }
 .mindmap-visual.is-visible .loop-outline { animation: draw-infinity 2.5s cubic-bezier(.55,.1,.25,1) forwards; }
 .mindmap-visual.is-visible .loop-arrow { animation: draw-infinity 1.8s ease .65s forwards; }
+.mindmap-visual.is-visible .loop-pulse { opacity: .6; animation: pulse-travel 7s linear 3s infinite; }
 .infinity-topic { cursor: pointer; opacity: 0; transform-box: fill-box; transform-origin: center; transition: transform .35s ease, opacity .7s ease; outline: none; }
 .mindmap-visual.is-visible .infinity-topic { opacity: 1; }
 .mindmap-visual.is-visible .topic-business { transition-delay: .18s; }
@@ -169,11 +171,16 @@ p.lead { margin: 0 0 1.2rem; font-family: var(--font-display); font-size: clamp(
 .topic-education, .topic-upcycling { color: var(--moss); }
 .topic-business, .topic-products { color: var(--puzzle-2); }
 .infinity-topic .topic-icon { stroke: currentColor; stroke-width: 3; }
+.infinity-topic .topic-icon path { transform-box: fill-box; transform-origin: center; animation: icon-bob 4.6s ease-in-out 3.4s infinite; }
+.mindmap-visual.is-visible .topic-business .topic-icon path { animation-delay: 3.9s; }
+.mindmap-visual.is-visible .topic-upcycling .topic-icon path { animation-delay: 4.4s; }
+.mindmap-visual.is-visible .topic-products .topic-icon path { animation-delay: 4.9s; }
 .infinity-topic .topic-title { fill: currentColor; font-family: var(--font-display); font-size: 27px; font-weight: 600; }
 .infinity-topic .topic-tag { fill: currentColor; font-size: 12px; font-weight: 700; letter-spacing: .11em; }
 .infinity-center { color: var(--primary); opacity: 0; transform-box: fill-box; transform-origin: center; }
 .mindmap-visual.is-visible .infinity-center { animation: center-arrive .8s ease 1.25s forwards; }
-.infinity-center circle { stroke: currentColor; stroke-width: 2.5; fill: var(--cream); }
+.infinity-center circle { stroke: currentColor; stroke-width: 2.5; fill: var(--cream); transform-box: fill-box; transform-origin: center; }
+.mindmap-visual.is-visible .infinity-center circle:first-of-type { animation: ring-breathe 5s ease-in-out 2.4s infinite; }
 .infinity-center .globe, .infinity-center .center-leaf { stroke-width: 2; }
 .infinity-center .center-title { fill: currentColor; font-family: var(--font-display); font-size: 25px; font-weight: 600; }
 
@@ -199,7 +206,15 @@ p.lead { margin: 0 0 1.2rem; font-family: var(--font-display); font-size: clamp(
 @keyframes extend { 0%, 100% { transform: scaleX(.45); } 50% { transform: scaleX(1); } }
 @keyframes drift { from { transform: translateY(-8px); } to { transform: translateY(8px); } }
 @keyframes draw-infinity { to { stroke-dashoffset: 0; } }
+@keyframes pulse-travel { from { stroke-dashoffset: 1800; } to { stroke-dashoffset: 0; } }
+@keyframes icon-bob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
+@keyframes ring-breathe { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.035); } }
 @keyframes center-arrive { from { opacity: 0; transform: scale(.85); } to { opacity: 1; transform: scale(1); } }
+
+@media (prefers-reduced-motion: reduce) {
+  .loop-pulse, .infinity-topic .topic-icon path, .infinity-center circle:first-of-type { animation: none; }
+  .loop-pulse { opacity: 0; }
+}
 
 @media (max-width: 760px) {
   .site-nav { grid-template-columns: 1fr; gap: .65rem; padding: .7rem 1rem .55rem; }
