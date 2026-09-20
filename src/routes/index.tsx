@@ -100,11 +100,13 @@ function MindMap() {
       </defs>
       <g className="infinity-loop infinity-loop-green">
         <path className="loop-outline" d="M600 325C510 205 430 65 235 65 80 65 50 260 165 325 50 390 80 585 235 585c195 0 275-140 365-260" />
+        <path className="loop-pulse" d="M600 325C510 205 430 65 235 65 80 65 50 260 165 325 50 390 80 585 235 585c195 0 275-140 365-260" />
         <path className="loop-arrow" markerEnd="url(#arrow-green)" d="M575 300C480 190 410 100 240 100 125 100 105 245 180 290" />
         <path className="loop-arrow" markerEnd="url(#arrow-green)" d="M180 360c-75 45-55 190 60 190 170 0 240-90 335-200" />
       </g>
       <g className="infinity-loop infinity-loop-blue">
         <path className="loop-outline" d="M600 325C690 205 770 65 965 65c155 0 185 195 70 260 115 65 85 260-70 260-195 0-275-140-365-260" />
+        <path className="loop-pulse" d="M600 325C690 205 770 65 965 65c155 0 185 195 70 260 115 65 85 260-70 260-195 0-275-140-365-260" />
         <path className="loop-arrow" markerEnd="url(#arrow-blue)" d="M625 300c95-110 165-200 335-200 115 0 135 145 60 190" />
         <path className="loop-arrow" markerEnd="url(#arrow-blue)" d="M1020 360c75 45 55 190-60 190-170 0-240-90-335-200" />
       </g>
