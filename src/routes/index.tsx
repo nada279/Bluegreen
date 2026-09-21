@@ -3,11 +3,11 @@ import { useEffect } from "react";
 import streamImage from "../assets/bluegreen-stream.jpg";
 import upcycleImage from "../assets/bluegreen-upcycle.jpg";
 import storyImage from "../assets/bluegreen-story.jpg";
-import logoWhite from "@/assets/logo-white.png.asset.json";
-import coastImage from "@/assets/bluegreen-coast.png.asset.json";
-import seedlingsImage from "@/assets/bluegreen-seedlings.webp.asset.json";
-import ecosystemMapImage from "@/assets/bluegreen-ecosystem-map.png.asset.json";
-import riverImage from "@/assets/bluegreen-river.png.asset.json";
+const logoWhite = "/assets/logo-white.png";
+const coastImage = "/assets/bluegreen-coast.png";
+const seedlingsImage = "/assets/bluegreen-seedlings.webp";
+const ecosystemMapImage = "/assets/bluegreen-ecosystem-map.png";
+const riverImage = "/assets/bluegreen-river.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
