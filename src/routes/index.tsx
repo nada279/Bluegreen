@@ -41,7 +41,7 @@ const nav = [
 function BrandMark() {
   return (
     <span className="brand-mark">
-      <img src={logoWhite.url} alt="BlueGreen logo" width={897} height={310} />
+      <img src={logoWhite} alt="BlueGreen logo" width={897} height={310} />
     </span>
   );
 }
@@ -170,7 +170,7 @@ function Index() {
       </header>
 
       <section id="hero" className="hero-section">
-        <img src={coastImage.url} alt="Green landscape beside blue water under sunlit clouds" width={1024} height={768} />
+        <img src={coastImage} alt="Green landscape beside blue water under sunlit clouds" width={1024} height={768} />
         <div className="hero-shade" />
         <div className="hero-copy">
           <p className="section-number light">BlueGreen / 01</p>
@@ -181,7 +181,7 @@ function Index() {
 
       <section id="journey" className="journey-section cream-section">
         <div className="journey-image reveal">
-          <img src={riverImage.url} alt="A clear river flowing through a green mountain landscape" loading="lazy" width={1365} height={768} />
+          <img src={riverImage} alt="A clear river flowing through a green mountain landscape" loading="lazy" width={1365} height={768} />
           <Doodle kind="nature" />
         </div>
         <div className="journey-copy reveal">
@@ -194,7 +194,7 @@ function Index() {
       </section>
 
       <section id="play" className="image-chapter play-section">
-        <img src={ecosystemMapImage.url} alt="Forest ecosystem with hand-drawn water, sun and growth connections" loading="lazy" width={1778} height={768} />
+        <img src={ecosystemMapImage} alt="Forest ecosystem with hand-drawn water, sun and growth connections" loading="lazy" width={1778} height={768} />
         <div className="image-shade" />
         <div className="chapter-copy reveal">
           <p className="section-number light">02 / Play</p>
@@ -211,7 +211,7 @@ function Index() {
           <p>Connections and interrelations emerge, revealing the ecosystem as a living, dynamic whole.</p>
         </div>
         <div className="logic-image reveal">
-          <img src={seedlingsImage.url} alt="Young plants growing across a mossy forest floor" loading="lazy" width={1778} height={768} />
+          <img src={seedlingsImage} alt="Young plants growing across a mossy forest floor" loading="lazy" width={1778} height={768} />
           <Doodle kind="nature" />
         </div>
       </section>
@@ -261,7 +261,7 @@ function Index() {
       </section>
 
       <footer className="closing-section">
-        <img src={coastImage.url} alt="Quiet water and green land beneath a sunlit sky" loading="lazy" width={1024} height={768} />
+        <img src={coastImage} alt="Quiet water and green land beneath a sunlit sky" loading="lazy" width={1024} height={768} />
         <div className="closing-shade" />
         <div className="closing-content reveal">
           <blockquote>
@@ -269,7 +269,7 @@ function Index() {
             <span>Rethink the habit.</span>
             <em>Transform the future.</em>
           </blockquote>
-          <img className="closing-logo" src={logoWhite.url} alt="BlueGreen" width={897} height={310} />
+          <img className="closing-logo" src={logoWhite} alt="BlueGreen" width={897} height={310} />
         </div>
       </footer>
 
