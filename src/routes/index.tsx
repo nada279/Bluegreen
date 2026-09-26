@@ -37,6 +37,7 @@ const nav = [
   ["Melody", "melody"],
   ["Wonder", "wonder"],
   ["Story", "story"],
+  ["Contact", "contact"],
 ] as const;
 
 function BrandMark() {
@@ -265,6 +266,26 @@ function Index() {
           <img className="closing-logo" src={logoWhite} alt="BlueGreen" width={897} height={310} />
         </div>
       </footer>
+
+      <section id="contact" className="contact-section">
+        <div className="contact-inner reveal">
+          <h2>Contact <em>Us</em></h2>
+          <div className="contact-list">
+            <div className="contact-item">
+              <span className="contact-label">Email</span>
+              <a href="mailto:info@bluegreen-egypt.com">info@bluegreen-egypt.com</a>
+            </div>
+            <div className="contact-item">
+              <span className="contact-label">BlueGreen Address</span>
+              <span>32 Dr. Aly Ibrahim Ramez St., Heliopolis</span>
+            </div>
+            <div className="contact-item">
+              <span className="contact-label">Tel</span>
+              <a href="tel:01039396946">01039396946</a>
+            </div>
+          </div>
+        </div>
+      </section>
 
     </main>
   );
