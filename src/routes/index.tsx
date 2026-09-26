@@ -173,7 +173,6 @@ function Index() {
         <img src={coastImage} alt="Green landscape beside blue water under sunlit clouds" width={1024} height={768} />
         <div className="hero-shade" />
         <div className="hero-copy">
-          <p className="section-number light">BlueGreen / 01</p>
           <h1>Transforming our<br />future together</h1>
         </div>
         <a className="scroll-cue" href="#journey" aria-label="Scroll to the environmental journey"><span />Explore the journey</a>
@@ -185,7 +184,6 @@ function Index() {
           <Doodle kind="nature" />
         </div>
         <div className="journey-copy reveal">
-          <p className="section-number">01 / The beginning</p>
           <h2>Environmental<br /><em>Journey</em></h2>
           <p className="lead">Learning that transforms knowledge into new ways of thinking, acting, and living.</p>
           <p>BlueGreen edutainment journey explores different environmental aspects, from climate change to the circular economy, mapping different layers of intervention that help transform the future, build resilience, and reveal sustainable solutions.</p>
@@ -197,7 +195,6 @@ function Index() {
         <img src={ecosystemMapImage} alt="Forest ecosystem with hand-drawn water, sun and growth connections" loading="lazy" width={1778} height={768} />
         <div className="image-shade" />
         <div className="chapter-copy reveal">
-          <p className="section-number light">02 / Play</p>
           <h2>Play<br /><em>Sustainability</em></h2>
           <p>Games and playful challenges open doors to new ways of seeing the planet. Through imagination and interaction, sustainability becomes a joyful path of discovery and action.</p>
         </div>
@@ -205,7 +202,6 @@ function Index() {
 
       <section id="logic" className="logic-section cream-section">
         <div className="logic-copy reveal">
-          <p className="section-number">03 / See the connections</p>
           <h2>Eco <em>Logic</em></h2>
           <p className="lead">Activities unfold like pieces of a puzzle, building logic and advancing perception of the environment.</p>
           <p>Connections and interrelations emerge, revealing the ecosystem as a living, dynamic whole.</p>
@@ -221,7 +217,6 @@ function Index() {
         <div className="image-shade" />
         <Doodle kind="music" />
         <div className="chapter-copy reveal">
-          <p className="section-number light">04 / Listen closely</p>
           <h2>Eco <em>Melody</em></h2>
           <p>Nature’s sounds become melodies that invite listening and respect. Singing for and about the planet turns its message into harmony, echoing our commitment to a transformed future.</p>
         </div>
@@ -229,7 +224,6 @@ function Index() {
 
       <section id="wonder" className="wonder-section cream-section">
         <div className="wonder-copy reveal">
-          <p className="section-number">05 / Reimagine value</p>
           <h2>Waste<br /><em>Wonder</em></h2>
           <p className="lead">What was once discarded is reborn as something useful and beautiful.</p>
           <p>Transformation reveals the hidden value of materials, honoring resources by turning waste into wonder.</p>
@@ -245,7 +239,6 @@ function Index() {
         <div className="image-shade" />
         <Doodle kind="story" />
         <div className="story-copy reveal">
-          <p className="section-number light">06 / Share the vision</p>
           <h2>Planet <em>Story</em></h2>
           <p>Narratives unfold not only from history but also from personal and imaginative voices. Together they weave a shared vision, telling the planet’s story toward a transformed and hopeful future.</p>
         </div>
@@ -253,7 +246,6 @@ function Index() {
 
       <section id="mindmap" className="mindmap-section cream-section">
         <div className="mindmap-heading reveal">
-          <p className="section-number">07 / Everything connects</p>
           <h2>One living<br /><em>ecosystem</em></h2>
           <p>Every branch of the journey returns to the same place: a deeper relationship with our planet.</p>
         </div>
