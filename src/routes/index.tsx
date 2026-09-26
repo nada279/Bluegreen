@@ -32,6 +32,7 @@ export const Route = createFileRoute("/")({
 
 const nav = [
   ["The Journey", "journey"],
+  ["Play", "play"],
   ["Logic", "logic"],
   ["Melody", "melody"],
   ["Wonder", "wonder"],
