@@ -195,13 +195,23 @@ p.lead { margin: 0 0 1.2rem; font-family: var(--font-display); font-size: clamp(
 .closing-content.is-visible .closing-logo { opacity: 1; transform: translateY(0); }
 
 .contact-section { min-height: 76svh; display: grid; place-items: center; padding: clamp(6rem, 10vw, 10rem) 6vw; background: var(--cream); }
-.contact-inner { width: min(640px, 100%); text-align: center; }
-.contact-inner h2 { margin-bottom: 2.6rem; }
-.contact-list { display: grid; gap: 1.8rem; }
-.contact-item { display: grid; gap: .45rem; justify-items: center; }
-.contact-item .contact-label { font-size: .62rem; letter-spacing: .18em; text-transform: uppercase; color: var(--muted-foreground); }
-.contact-item a, .contact-item > span:last-child { font-family: var(--font-display); font-size: clamp(1.25rem, 2.2vw, 1.7rem); line-height: 1.3; color: var(--primary); transition: color .25s ease; }
+.contact-inner { width: min(680px, 100%); text-align: center; }
+
+.contact-write { margin-bottom: 3rem; font-family: "Caveat", cursive; font-weight: 600; font-size: clamp(3.4rem, 7.5vw, 5.6rem); line-height: 1.05; letter-spacing: .01em; }
+.contact-write em { font-style: normal; color: var(--moss); }
+.contact-write .w-letter { display: inline-block; opacity: 0; transform: translateY(16px) rotate(-5deg); filter: blur(4px); transition: opacity .4s ease, transform .45s cubic-bezier(.2,.8,.2,1), filter .4s ease; }
+.contact-inner.is-visible .contact-write .w-letter { opacity: 1; transform: translateY(0) rotate(0deg); filter: blur(0); }
+
+.contact-list { display: grid; gap: 2.4rem; }
+.contact-item { display: grid; gap: .55rem; justify-items: center; }
+.contact-item + .contact-item { padding-top: 1.9rem; border-top: 1px solid color-mix(in oklab, var(--muted-foreground) 22%, transparent); }
+.contact-item .contact-label { font-family: var(--font-body); font-size: .72rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: color-mix(in oklab, var(--muted-foreground) 62%, var(--foreground)); }
+.contact-item a, .contact-item > span:last-child { font-family: var(--font-display); font-size: clamp(1.45rem, 2.6vw, 1.95rem); font-weight: 500; line-height: 1.45; color: var(--primary); transition: color .25s ease; }
 .contact-item a:hover { color: var(--moss); }
+
+@media (prefers-reduced-motion: reduce) {
+  .contact-write .w-letter { opacity: 1; transform: none; filter: none; transition: none; }
+}
 
 .reveal { opacity: 0; transform: translateY(40px); transition: opacity .55s ease-out, transform .55s cubic-bezier(.2,.8,.2,1); }
 .reveal.is-visible { opacity: 1; transform: translateY(0); }
