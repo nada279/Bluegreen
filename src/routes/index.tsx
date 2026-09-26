@@ -269,7 +269,20 @@ function Index() {
 
       <section id="contact" className="contact-section">
         <div className="contact-inner reveal">
-          <h2>Contact <em>Us</em></h2>
+          <h2 className="contact-write" aria-label="Contact Us">
+            {"Contact ".split("").map((ch, i) => (
+              <span key={`c${i}`} className="w-letter" style={{ transitionDelay: `${i * 55}ms` }} aria-hidden="true">
+                {ch === " " ? "\u00A0" : ch}
+              </span>
+            ))}
+            <em>
+              {"Us".split("").map((ch, i) => (
+                <span key={`u${i}`} className="w-letter" style={{ transitionDelay: `${(8 + i) * 55}ms` }} aria-hidden="true">
+                  {ch}
+                </span>
+              ))}
+            </em>
+          </h2>
           <div className="contact-list">
             <div className="contact-item">
               <span className="contact-label">Email</span>
