@@ -143,7 +143,6 @@ p.lead { margin: 0 0 1.2rem; font-family: var(--font-display); font-size: clamp(
 
 .mindmap-section { padding: clamp(6rem, 10vw, 11rem) 6vw; }
 .mindmap-heading { display: grid; grid-template-columns: .65fr 1fr; align-items: end; column-gap: 4rem; }
-.mindmap-heading .section-number { grid-column: 1 / -1; }
 .mindmap-heading h2 { margin: 0; }
 .mindmap-visual { max-width: 1120px; margin: 3rem auto 0; }
 .mind-map { width: 100%; overflow: visible; fill: none; stroke: currentColor; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; color: var(--primary); }
