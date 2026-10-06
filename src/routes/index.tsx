@@ -8,6 +8,7 @@ const coastImage = "/assets/bluegreen-coast.png";
 const seedlingsImage = "/assets/bluegreen-seedlings.webp";
 const ecosystemMapImage = "/assets/bluegreen-ecosystem-map.png";
 const riverImage = "/assets/bluegreen-river.png";
+const globeImage = "/assets/bluegreen-globe.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -172,7 +173,7 @@ function Index() {
       </header>
 
       <section id="hero" className="hero-section">
-        <img src={coastImage} alt="Green landscape beside blue water under sunlit clouds" width={1024} height={768} />
+        <img src={globeImage} alt="Glass globe resting on green moss in a sunlit forest" width={1024} height={768} />
         <div className="hero-shade" />
         <div className="hero-copy">
           <h1>Transforming our<br />future together</h1>
