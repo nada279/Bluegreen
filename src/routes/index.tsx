@@ -5,7 +5,7 @@ import upcycleImage from "../assets/bluegreen-upcycle.jpg";
 import storyImage from "../assets/bluegreen-story.jpg";
 const logoWhite = "/assets/logo-white.png";
 const coastImage = "/assets/bluegreen-coast.png";
-const seedlingsImage = "/assets/bluegreen-seedlings.webp";
+const ecoCyclesImage = "/assets/bluegreen-eco-cycles.jpg";
 const playImage = "/assets/bluegreen-play-blocks.jpg";
 const riverImage = "/assets/bluegreen-journey-river.jpg";
 const globeImage = "/assets/bluegreen-globe.jpg";
@@ -210,7 +210,7 @@ function Index() {
           <p>Connections and interrelations emerge, revealing the ecosystem as a living, dynamic whole.</p>
         </div>
         <div className="logic-image reveal">
-          <img src={seedlingsImage} alt="Young plants growing across a mossy forest floor" loading="lazy" width={1778} height={768} />
+          <img src={ecoCyclesImage} alt="Hand-drawn ecosystem cycle of water, sun and growth over a mossy forest floor" loading="lazy" width={1600} height={686} />
           <Doodle kind="nature" />
         </div>
       </section>
