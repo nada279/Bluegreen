@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect } from "react";
 import streamImage from "../assets/bluegreen-stream.jpg";
-import upcycleImage from "../assets/bluegreen-upcycle.jpg";
+const wonderImage = "/assets/bluegreen-wonder-upcycle.jpg";
 import storyImage from "../assets/bluegreen-story.jpg";
 const logoWhite = "/assets/logo-white.png";
 const coastImage = "/assets/bluegreen-coast.png";
@@ -233,7 +233,7 @@ function Index() {
           <Doodle kind="cycle" />
         </div>
         <div className="wonder-image reveal">
-          <img src={upcycleImage} alt="Natural materials transformed into useful objects" loading="lazy" width={1600} height={1200} />
+          <img src={wonderImage} alt="Plants growing in upcycled wooden, glass and tin containers" loading="lazy" width={1600} height={1580} />
         </div>
       </section>
 
