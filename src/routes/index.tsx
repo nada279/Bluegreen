@@ -183,7 +183,7 @@ function Index() {
 
       <section id="journey" className="journey-section cream-section">
         <div className="journey-image reveal">
-          <img src={riverImage} alt="A clear river flowing through a green mountain landscape" loading="lazy" width={1365} height={768} />
+          <img src={riverImage} alt="Sketch of a traveller rowing a boat along a sunlit forest river" loading="lazy" width={1920} height={1080} />
           <Doodle kind="nature" />
         </div>
         <div className="journey-copy reveal">
