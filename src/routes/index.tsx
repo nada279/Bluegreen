@@ -7,7 +7,7 @@ const logoWhite = "/assets/logo-white.png";
 const coastImage = "/assets/bluegreen-coast.png";
 const seedlingsImage = "/assets/bluegreen-seedlings.webp";
 const ecosystemMapImage = "/assets/bluegreen-ecosystem-map.png";
-const riverImage = "/assets/bluegreen-river.png";
+const riverImage = "/assets/bluegreen-journey-river.jpg";
 const globeImage = "/assets/bluegreen-globe.jpg";
 
 export const Route = createFileRoute("/")({
