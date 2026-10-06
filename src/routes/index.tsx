@@ -6,7 +6,7 @@ import storyImage from "../assets/bluegreen-story.jpg";
 const logoWhite = "/assets/logo-white.png";
 const coastImage = "/assets/bluegreen-coast.png";
 const seedlingsImage = "/assets/bluegreen-seedlings.webp";
-const ecosystemMapImage = "/assets/bluegreen-ecosystem-map.png";
+const playImage = "/assets/bluegreen-play-blocks.jpg";
 const riverImage = "/assets/bluegreen-journey-river.jpg";
 const globeImage = "/assets/bluegreen-globe.jpg";
 
@@ -195,7 +195,7 @@ function Index() {
       </section>
 
       <section id="play" className="image-chapter play-section">
-        <img src={ecosystemMapImage} alt="Forest ecosystem with hand-drawn water, sun and growth connections" loading="lazy" width={1778} height={768} />
+        <img src={playImage} alt="Wooden blocks stacked with green eco icons spelling Net Zero beside a hand-drawn child in a fern forest" loading="lazy" width={1600} height={1101} />
         <div className="image-shade" />
         <div className="chapter-copy reveal">
           <h2>Play<br /><em>Sustainability</em></h2>
