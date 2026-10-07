@@ -4,6 +4,7 @@ const streamImage = "/assets/bluegreen-melody.jpg";
 const wonderImage = "/assets/bluegreen-wonder-upcycle.jpg";
 const storyImage = "/assets/bluegreen-story-seedling.jpg";
 const logoWhite = "/assets/logo-white.png";
+const logoColor = "/assets/logo-color.png";
 const coastImage = "/assets/bluegreen-coast.png";
 const ecoCyclesImage = "/assets/bluegreen-eco-cycles.jpg";
 const playImage = "/assets/bluegreen-play-blocks.jpg";
@@ -44,7 +45,7 @@ const nav = [
 function BrandMark() {
   return (
     <span className="brand-mark">
-      <img src={logoWhite} alt="BlueGreen logo" width={897} height={310} />
+      <img src={logoColor} alt="BlueGreen logo" width={897} height={310} />
     </span>
   );
 }

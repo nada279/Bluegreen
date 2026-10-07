@@ -69,7 +69,9 @@
 }
 
 * { box-sizing: border-box; border-color: var(--border); }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; scroll-padding-top: var(--nav-h); }
+:root { --nav-h: 4.6rem; }
+main > section[id] { min-height: calc(100svh - var(--nav-h)); box-sizing: border-box; }
 body { margin: 0; background: var(--background); color: var(--foreground); font-family: var(--font-sans); }
 body, a { cursor: default; }
 a { color: inherit; text-decoration: none; cursor: pointer; }
@@ -80,7 +82,7 @@ main { overflow: clip; }
   position: fixed; inset: 0 0 auto; z-index: 50; display: grid;
   grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 1rem;
   padding: 1rem 3.5vw; color: var(--primary-foreground);
-  background: color-mix(in oklab, var(--forest) 64%, transparent);
+  background: color-mix(in oklab, var(--forest) 36%, transparent);
   border-bottom: 1px solid color-mix(in oklab, var(--line-light) 18%, transparent);
   backdrop-filter: blur(14px);
 }
@@ -88,7 +90,7 @@ main { overflow: clip; }
 .brand-mark { display: inline-flex; align-items: center; }
 .brand-mark img { height: 2.6rem; width: auto; display: block; }
 .site-nav nav { display: flex; align-items: center; gap: clamp(.8rem, 2vw, 2.2rem); }
-.site-nav nav a { font-size: .66rem; text-transform: uppercase; letter-spacing: .12em; opacity: .8; transition: opacity .25s ease; }
+.site-nav nav a { font-size: .82rem; font-weight: 500; text-transform: uppercase; letter-spacing: .12em; opacity: .9; transition: opacity .25s ease; }
 .site-nav nav a:hover { opacity: 1; }
 
 .hero-section, .image-chapter, .story-section { position: relative; color: var(--primary-foreground); }
@@ -110,8 +112,8 @@ main { overflow: clip; }
 .journey-copy, .logic-copy, .wonder-copy { display: flex; flex-direction: column; justify-content: center; padding: clamp(4.5rem, 9vw, 10rem) clamp(2rem, 7vw, 8rem); }
 h2 { margin: 0 0 2.4rem; font-family: var(--font-display); font-size: clamp(3.5rem, 6.8vw, 7rem); font-weight: 500; line-height: .82; letter-spacing: 0; }
 h2 em { color: var(--moss); font-weight: 400; }
-.journey-copy p, .logic-copy p, .wonder-copy p, .mindmap-heading p { max-width: 34rem; font-size: .94rem; line-height: 1.85; }
-p.lead { margin: 0 0 1.2rem; font-family: var(--font-display); font-size: clamp(1.4rem, 2vw, 2rem); line-height: 1.25; }
+.journey-copy p, .logic-copy p, .wonder-copy p, .mindmap-heading p { max-width: 36rem; font-family: var(--font-sans); font-size: 1.05rem; line-height: 1.8; }
+p.lead { margin: 0 0 1.2rem; font-family: var(--font-sans); font-size: 1.05rem; line-height: 1.8; }
 
 .image-chapter { min-height: 94svh; display: flex; align-items: flex-end; overflow: hidden; }
 .image-chapter > img { transition: transform 4s ease; }
@@ -119,7 +121,7 @@ p.lead { margin: 0 0 1.2rem; font-family: var(--font-display); font-size: clamp(
 .chapter-copy { position: relative; z-index: 3; max-width: 49rem; padding: 9rem 7vw 8vw; }
 .chapter-copy h2 { font-size: clamp(4rem, 8vw, 8.5rem); }
 .chapter-copy h2 em, .story-copy h2 em { color: inherit; }
-.chapter-copy > p:last-child, .story-copy > p:last-child { max-width: 39rem; font-size: 1rem; line-height: 1.75; }
+.chapter-copy > p:last-child, .story-copy > p:last-child { max-width: 36rem; font-family: var(--font-sans); font-size: 1.05rem; line-height: 1.8; }
 .doodle { position: absolute; z-index: 2; fill: none; stroke: var(--line-light); stroke-width: 1.25; stroke-linecap: round; stroke-linejoin: round; pointer-events: none; }
 .doodle path, .doodle circle { stroke-dasharray: 1200; stroke-dashoffset: 1200; transition: stroke-dashoffset 1.4s ease .1s; }
 .is-visible .doodle path, .is-visible .doodle circle, section:has(.is-visible) > .doodle path, section:has(.is-visible) > .doodle circle { stroke-dashoffset: 0; }
@@ -236,7 +238,8 @@ p.lead { margin: 0 0 1.2rem; font-family: var(--font-display); font-size: clamp(
   .brand-mark img { height: 2rem; }
   .site-nav nav { width: 100%; gap: 1.15rem; overflow-x: auto; scrollbar-width: none; padding-bottom: .1rem; }
   .site-nav nav::-webkit-scrollbar { display: none; }
-  .site-nav nav a { flex: 0 0 auto; font-size: .56rem; }
+  .site-nav nav a { flex: 0 0 auto; font-size: .7rem; }
+  :root { --nav-h: 5.6rem; }
   .hero-section { min-height: 92svh; }
   .hero-copy { padding: 0 1.25rem 17vh; }
   .hero-copy h1 { font-size: clamp(3.6rem, 18vw, 5.6rem); }
