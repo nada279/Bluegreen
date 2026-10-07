@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useEffect } from "react";
 import streamImage from "../assets/bluegreen-stream.jpg";
 const wonderImage = "/assets/bluegreen-wonder-upcycle.jpg";
-import storyImage from "../assets/bluegreen-story.jpg";
+const storyImage = "/assets/bluegreen-story-seedling.jpg";
 const logoWhite = "/assets/logo-white.png";
 const coastImage = "/assets/bluegreen-coast.png";
 const ecoCyclesImage = "/assets/bluegreen-eco-cycles.jpg";
@@ -238,7 +238,7 @@ function Index() {
       </section>
 
       <section id="story" className="story-section">
-        <img src={storyImage} alt="Sunlight and a waterfall along a path through an ancient forest" loading="lazy" width={1200} height={1600} />
+        <img src={storyImage} alt="A young seedling growing from a tree stump in golden sunlight, with a sketched child reading" loading="lazy" width={1600} height={1046} />
         <div className="image-shade" />
         <Doodle kind="story" />
         <div className="story-copy reveal">
