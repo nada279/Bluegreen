@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect } from "react";
-import streamImage from "../assets/bluegreen-stream.jpg";
+const streamImage = "/assets/bluegreen-melody.jpg";
 const wonderImage = "/assets/bluegreen-wonder-upcycle.jpg";
 const storyImage = "/assets/bluegreen-story-seedling.jpg";
 const logoWhite = "/assets/logo-white.png";
@@ -184,7 +184,6 @@ function Index() {
       <section id="journey" className="journey-section cream-section">
         <div className="journey-image reveal">
           <img src={riverImage} alt="Sketch of a traveller rowing a boat along a sunlit forest river" loading="lazy" width={1920} height={1080} />
-          <Doodle kind="nature" />
         </div>
         <div className="journey-copy reveal">
           <h2>Environmental<br /><em>Journey</em></h2>
@@ -211,14 +210,12 @@ function Index() {
         </div>
         <div className="logic-image reveal">
           <img src={ecoCyclesImage} alt="Hand-drawn ecosystem cycle of water, sun and growth over a mossy forest floor" loading="lazy" width={1133} height={686} />
-          <Doodle kind="nature" />
         </div>
       </section>
 
       <section id="melody" className="image-chapter melody-section">
-        <img src={streamImage} alt="A clear stream flowing through a mossy forest" loading="lazy" width={1600} height={1008} />
+        <img src={streamImage} alt="A guitar resting on a mossy rock beside a forest stream, with a sketched girl playing music" loading="lazy" width={1600} height={1101} />
         <div className="image-shade" />
-        <Doodle kind="music" />
         <div className="chapter-copy reveal">
           <h2>Eco <em>Melody</em></h2>
           <p>Nature’s sounds become melodies that invite listening and respect. Singing for and about the planet turns its message into harmony, echoing our commitment to a transformed future.</p>
@@ -230,7 +227,6 @@ function Index() {
           <h2>Waste<br /><em>Wonder</em></h2>
           <p className="lead">What was once discarded is reborn as something useful and beautiful.</p>
           <p>Transformation reveals the hidden value of materials, honoring resources by turning waste into wonder.</p>
-          <Doodle kind="cycle" />
         </div>
         <div className="wonder-image reveal">
           <img src={wonderImage} alt="Plants growing in upcycled wooden, glass and tin containers" loading="lazy" width={1600} height={1580} />
@@ -240,7 +236,6 @@ function Index() {
       <section id="story" className="story-section">
         <img src={storyImage} alt="A young seedling growing from a tree stump in golden sunlight, with a sketched child reading" loading="lazy" width={1600} height={1046} />
         <div className="image-shade" />
-        <Doodle kind="story" />
         <div className="story-copy reveal">
           <h2>Planet <em>Story</em></h2>
           <p>Narratives unfold not only from history but also from personal and imaginative voices. Together they weave a shared vision, telling the planet’s story toward a transformed and hopeful future.</p>
