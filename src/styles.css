@@ -70,7 +70,7 @@
 
 * { box-sizing: border-box; border-color: var(--border); }
 html { scroll-behavior: smooth; scroll-padding-top: var(--nav-h); }
-:root { --nav-h: 4.6rem; }
+:root { --nav-h: 5.1rem; }
 main > section[id] { min-height: calc(100svh - var(--nav-h)); box-sizing: border-box; }
 body { margin: 0; background: var(--background); color: var(--foreground); font-family: var(--font-sans); }
 body, a { cursor: default; }
