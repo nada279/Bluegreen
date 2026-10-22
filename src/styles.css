@@ -112,6 +112,7 @@ main { overflow: clip; }
 .journey-copy, .logic-copy, .wonder-copy { display: flex; flex-direction: column; justify-content: center; padding: clamp(4.5rem, 9vw, 10rem) clamp(2rem, 7vw, 8rem); }
 h2 { margin: 0 0 2.4rem; font-family: var(--font-display); font-size: clamp(3.5rem, 6.8vw, 7rem); font-weight: 500; line-height: .82; letter-spacing: 0; }
 h2 em { color: var(--moss); font-weight: 400; }
+.journey-copy h2 { margin-left: clamp(-2.6rem, -3.4vw, -1.1rem); }
 .journey-copy p, .logic-copy p, .wonder-copy p, .mindmap-heading p { max-width: 36rem; font-family: var(--font-sans); font-size: 1.05rem; line-height: 1.8; }
 p.lead { margin: 0 0 1.2rem; font-family: var(--font-sans); font-size: 1.05rem; line-height: 1.8; }
 
@@ -247,6 +248,7 @@ p.lead { margin: 0 0 1.2rem; font-family: var(--font-sans); font-size: 1.05rem; 
   .journey-section, .logic-section, .wonder-section { grid-template-columns: 1fr; }
   .journey-image, .logic-image, .wonder-image { min-height: 58svh; }
   .journey-copy, .logic-copy, .wonder-copy { padding: 5rem 1.35rem; }
+  .journey-copy h2 { margin-left: -.45rem; }
   .logic-image { grid-row: 1; }
   h2 { font-size: clamp(3.6rem, 16vw, 5.4rem); }
   .image-chapter { min-height: 94svh; }
