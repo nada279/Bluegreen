@@ -129,6 +129,7 @@ p.lead { margin: 0 0 1.2rem; font-family: var(--font-sans); font-size: 1.05rem; 
 .play-section > .doodle { right: 6vw; bottom: 6vh; width: min(29vw, 390px); opacity: .8; }
 .play-section { align-items: flex-start; }
 .play-section .chapter-copy { padding: 8.5rem 7vw 4vw; }
+.play-section .chapter-copy > p:last-child { max-width: 27rem; }
 .play-section > .image-shade { background: linear-gradient(180deg, color-mix(in oklab, var(--forest) 62%, transparent), color-mix(in oklab, var(--forest) 22%, transparent) 48%, color-mix(in oklab, var(--forest) 34%, transparent)); }
 
 .logic-section { min-height: 92svh; display: grid; grid-template-columns: .82fr 1.18fr; }
