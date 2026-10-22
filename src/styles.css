@@ -131,6 +131,17 @@ p.lead { margin: 0 0 1.2rem; font-family: var(--font-sans); font-size: 1.05rem; 
 .play-section .chapter-copy { padding: 3.2rem 7vw 4vw; }
 .play-section .chapter-copy > p:last-child { max-width: 24rem; }
 .play-section > .image-shade { background: linear-gradient(180deg, color-mix(in oklab, var(--forest) 62%, transparent), color-mix(in oklab, var(--forest) 22%, transparent) 48%, color-mix(in oklab, var(--forest) 34%, transparent)); }
+.play-section .chapter-copy::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: -3.2rem -9rem -4.5rem -14vw;
+  background:
+    radial-gradient(66% 60% at 24% 42%, color-mix(in oklab, var(--forest) 74%, transparent), transparent 76%),
+    linear-gradient(180deg, color-mix(in oklab, var(--forest) 42%, transparent), transparent 84%);
+  filter: blur(14px);
+  pointer-events: none;
+}
 
 .logic-section { min-height: 92svh; display: grid; grid-template-columns: .82fr 1.18fr; }
 .logic-image { position: relative; overflow: hidden; }
