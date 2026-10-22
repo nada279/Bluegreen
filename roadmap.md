@@ -6,3 +6,4 @@
 - [x] Replace the puzzle diagram with the interactive, re-drawing infinity diagram and supplied content.
 - [x] Improve Contact Us readability and add a gentle write-in motion on the heading.
 - [x] Replace the homepage hero image with the uploaded green globe photo.
+- [x] Shift the Environmental Journey heading slightly left of the body copy.
