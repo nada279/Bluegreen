@@ -195,7 +195,7 @@ function Index() {
       </section>
 
       <section id="play" className="image-chapter play-section">
-        <img src={playImage} alt="Wooden blocks stacked with green eco icons spelling Net Zero beside a hand-drawn child in a fern forest" loading="lazy" width={1672} height={941} />
+        <img src={playImage} alt="Wooden blocks with green eco icons spelling Net Zero stacked on a mossy log in a sunlit fern forest" loading="lazy" width={1672} height={941} />
         <div className="image-shade" />
         <div className="chapter-copy reveal">
           <h2>Play<br /><em>Sustainability</em></h2>
