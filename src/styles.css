@@ -127,6 +127,9 @@ p.lead { margin: 0 0 1.2rem; font-family: var(--font-sans); font-size: 1.05rem; 
 .doodle path, .doodle circle { stroke-dasharray: 1200; stroke-dashoffset: 1200; transition: stroke-dashoffset 1.4s ease .1s; }
 .is-visible .doodle path, .is-visible .doodle circle, section:has(.is-visible) > .doodle path, section:has(.is-visible) > .doodle circle { stroke-dashoffset: 0; }
 .play-section > .doodle { right: 6vw; bottom: 6vh; width: min(29vw, 390px); opacity: .8; }
+.play-section { align-items: flex-start; }
+.play-section .chapter-copy { padding: 8.5rem 7vw 4vw; }
+.play-section > .image-shade { background: linear-gradient(180deg, color-mix(in oklab, var(--forest) 62%, transparent), color-mix(in oklab, var(--forest) 22%, transparent) 48%, color-mix(in oklab, var(--forest) 34%, transparent)); }
 
 .logic-section { min-height: 92svh; display: grid; grid-template-columns: .82fr 1.18fr; }
 .logic-image { position: relative; overflow: hidden; }
@@ -253,6 +256,7 @@ p.lead { margin: 0 0 1.2rem; font-family: var(--font-sans); font-size: 1.05rem; 
   h2 { font-size: clamp(3.6rem, 16vw, 5.4rem); }
   .image-chapter { min-height: 94svh; }
   .chapter-copy { padding: 7rem 1.35rem 3.5rem; }
+  .play-section .chapter-copy { padding: 6rem 1.35rem 2.5rem; }
   .chapter-copy h2 { font-size: clamp(4rem, 19vw, 6rem); }
   .play-section > .doodle { width: 55vw; right: -4vw; top: 18%; bottom: auto; }
   .melody-section > .doodle { width: 74vw; right: -8%; top: 16%; }
