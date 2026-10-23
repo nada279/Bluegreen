@@ -144,7 +144,9 @@ p.lead { margin: 0 0 1.2rem; font-family: var(--font-sans); font-size: 1.05rem; 
 }
 
 .logic-section { min-height: 92svh; display: grid; grid-template-columns: .82fr 1.18fr; }
-.logic-image { position: relative; overflow: hidden; }
+.logic-image { position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center; }
+.logic-image > img:first-child { object-fit: contain; height: auto; max-height: 100%; filter: brightness(1.08); }
+.logic-copy { padding-top: clamp(2.2rem, 4.2vw, 4.4rem); }
 .logic-image .doodle { inset: auto 5% 5% auto; width: 48%; }
 .melody-section > .doodle { top: 20%; right: 6%; width: min(42vw, 620px); animation: drift 6s ease-in-out infinite alternate; }
 
