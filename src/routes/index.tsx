@@ -210,7 +210,7 @@ function Index() {
           <p>Connections and interrelations emerge, revealing the ecosystem as a living, dynamic whole.</p>
         </div>
         <div className="logic-image reveal">
-          <img src={ecoCyclesImage} alt="Hand-drawn ecosystem cycle of water, sun and growth over a mossy forest floor" loading="lazy" width={1376} height={768} />
+          <img src={ecoCyclesImage} alt="Hand-drawn ecosystem cycle of water, sun and growth over a mossy forest floor" loading="lazy" width={928} height={1152} />
         </div>
       </section>
 
