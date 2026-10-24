@@ -94,12 +94,12 @@ main { overflow: clip; }
 .site-nav nav a:hover { opacity: 1; }
 
 .hero-section, .image-chapter, .story-section { position: relative; color: var(--primary-foreground); }
-.hero-section { min-height: 96svh; display: flex; align-items: flex-end; }
+.hero-section { min-height: 96svh; display: flex; align-items: flex-start; }
 .hero-section > img, .image-chapter > img, .story-section > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 .hero-section > img { animation: breathe 18s ease-in-out infinite alternate; }
 .hero-shade, .image-shade { position: absolute; inset: 0; background: linear-gradient(180deg, color-mix(in oklab, var(--forest) 18%, transparent), color-mix(in oklab, var(--forest) 74%, transparent)); }
-.hero-copy { position: relative; z-index: 2; width: min(1400px, 100%); padding: 0 7vw 11vh; animation: rise-in .8s ease both; }
-.hero-copy h1 { max-width: 870px; margin: .7rem 0 0; font-family: var(--font-display); font-size: clamp(4rem, 8.7vw, 9rem); font-weight: 400; line-height: .82; letter-spacing: 0; }
+.hero-copy { position: relative; z-index: 2; width: min(1400px, 100%); padding: calc(var(--nav-h) + 3.2rem) 7vw 4vh; animation: rise-in .8s ease both; }
+.hero-copy h1 { max-width: 760px; margin: .7rem 0 0; font-family: var(--font-display); font-size: clamp(3.4rem, 7.4vw, 7.6rem); font-weight: 400; line-height: .88; letter-spacing: 0; }
 .scroll-cue { position: absolute; z-index: 3; right: 4vw; bottom: 6vh; display: flex; align-items: center; gap: .8rem; font-size: .65rem; letter-spacing: .14em; text-transform: uppercase; }
 .scroll-cue span { width: 2.8rem; height: 1px; background: currentColor; animation: extend 2s ease-in-out infinite; transform-origin: right; }
 

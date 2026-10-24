@@ -174,7 +174,7 @@ function Index() {
       </header>
 
       <section id="hero" className="hero-section">
-        <img src={globeImage} alt="Glass globe resting on green moss in a sunlit forest" width={1024} height={768} />
+        <img src={globeImage} alt="Glass globe resting on green moss in a sunlit forest" width={1672} height={940} />
         <div className="hero-shade" />
         <div className="hero-copy">
           <h1>Transforming our<br />future together</h1>
