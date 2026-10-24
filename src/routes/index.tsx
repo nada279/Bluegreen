@@ -235,7 +235,7 @@ function Index() {
       </section>
 
       <section id="story" className="story-section">
-        <img src={storyImage} alt="A young seedling growing from a tree stump in golden sunlight, with a sketched child reading" loading="lazy" width={1600} height={1046} />
+        <img src={storyImage} alt="A young seedling growing from a mossy log in golden sunlight, with a sketched child reading" loading="lazy" width={1672} height={941} />
         <div className="image-shade" />
         <div className="story-copy reveal">
           <h2>Planet <em>Story</em></h2>

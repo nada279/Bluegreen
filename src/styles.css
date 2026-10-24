@@ -161,9 +161,10 @@ p.lead { margin: 0 0 1.2rem; font-family: var(--font-sans); font-size: 1.05rem; 
 .wonder-image { min-height: 720px; overflow: hidden; }
 
 .story-section { min-height: 110svh; }
-.story-section > img { object-position: center 60%; }
+.story-section > img { object-position: center 60%; filter: brightness(1.12); }
 .story-section > .doodle { right: 9vw; top: 20%; width: min(33vw, 430px); }
-.story-copy { position: absolute; z-index: 3; left: 7vw; bottom: 9vh; width: min(560px, 84vw); }
+.story-section > .image-shade { background: linear-gradient(180deg, color-mix(in oklab, var(--forest) 66%, transparent), color-mix(in oklab, var(--forest) 18%, transparent) 52%, color-mix(in oklab, var(--forest) 24%, transparent)); }
+.story-copy { position: absolute; z-index: 3; left: 7vw; top: 8.4rem; bottom: auto; width: min(560px, 84vw); }
 .story-copy h2 { font-size: clamp(4rem, 8vw, 8rem); }
 
 .mindmap-section { padding: clamp(6rem, 10vw, 11rem) 6vw; }
@@ -284,7 +285,7 @@ p.lead { margin: 0 0 1.2rem; font-family: var(--font-sans); font-size: 1.05rem; 
   .melody-section > .doodle { width: 74vw; right: -8%; top: 16%; }
   .story-section { min-height: 95svh; }
   .story-section > .doodle { width: 58vw; right: -4vw; top: 17%; }
-  .story-copy { left: 1.35rem; bottom: 5vh; }
+  .story-copy { left: 1.35rem; top: 6.4rem; bottom: auto; }
   .mindmap-section { padding: 6rem 1rem; }
   .mindmap-heading { display: block; }
   .mindmap-heading p { line-height: 1.6; }
