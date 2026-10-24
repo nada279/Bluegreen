@@ -7,3 +7,4 @@
 - [x] Improve Contact Us readability and add a gentle write-in motion on the heading.
 - [x] Replace the homepage hero image with the uploaded green globe photo.
 - [x] Shift the Environmental Journey heading slightly left of the body copy.
+- [x] Put the bright seedling photo in Planet Story with the copy aligned left above it.
