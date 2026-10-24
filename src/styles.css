@@ -265,7 +265,8 @@ p.lead { margin: 0 0 1.2rem; font-family: var(--font-sans); font-size: 1.05rem; 
   :root { --nav-h: 5.6rem; }
   .hero-section { min-height: 92svh; }
   .hero-copy { padding: calc(var(--nav-h) + 2.2rem) 1.25rem 4vh; }
-  .hero-copy h1 { font-size: clamp(3rem, 15vw, 4.6rem); }
+  .hero-copy h1 { font-size: clamp(2.6rem, 13vw, 4.6rem); }
+  .hero-section > img { object-position: 66% center; }
   .scroll-cue { left: 1.25rem; right: auto; bottom: 7vh; }
   .journey-section, .logic-section, .wonder-section { grid-template-columns: 1fr; }
   .journey-image, .logic-image, .wonder-image { min-height: 58svh; }
