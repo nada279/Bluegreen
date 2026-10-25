@@ -8,3 +8,4 @@
 - [x] Replace the homepage hero image with the uploaded green globe photo.
 - [x] Shift the Environmental Journey heading slightly left of the body copy.
 - [x] Put the bright seedling photo in Planet Story with the copy aligned left above it.
+- [ ] Fit the new Journey lake image to the left panel with the figure centered and the right text panel stationary and aligned.
