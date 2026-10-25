@@ -158,9 +158,10 @@ p.lead { margin: 0 0 1.2rem; font-family: var(--font-sans); font-size: 1.05rem; 
 .melody-section > .doodle { top: 20%; right: 6%; width: min(42vw, 620px); animation: drift 6s ease-in-out infinite alternate; }
 
 .wonder-section { display: grid; grid-template-columns: .78fr 1.22fr; min-height: 88svh; }
-.wonder-copy { position: relative; overflow: hidden; }
+.wonder-copy { position: relative; overflow: hidden; justify-content: flex-start; padding-top: clamp(2.4rem, 5vw, 5rem); }
 .wonder-copy .doodle { right: -5%; bottom: 2%; width: min(48%, 280px); stroke: var(--moss); opacity: .65; }
 .wonder-image { min-height: 720px; overflow: hidden; }
+.wonder-image > img:first-child { object-position: left center; transform-origin: left center; }
 
 .story-section { min-height: 110svh; }
 .story-section > img { object-position: center 60%; filter: brightness(1.12); }
