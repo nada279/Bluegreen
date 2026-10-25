@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect } from "react";
+import journeyLake from "@/assets/journey-lake-extended.jpg";
 const streamImage = "/assets/bluegreen-melody.jpg";
 const wonderImage = "/assets/bluegreen-wonder-upcycle.jpg";
 const storyImage = "/assets/bluegreen-story-seedling.jpg";
@@ -8,7 +9,7 @@ const logoColor = "/assets/logo-color.png";
 const coastImage = "/assets/bluegreen-coast.png";
 const ecoCyclesImage = "/assets/bluegreen-eco-cycles.jpg";
 const playImage = "/assets/bluegreen-play-blocks.jpg";
-const riverImage = "/assets/bluegreen-journey-river.jpg";
+const riverImage = journeyLake;
 const globeImage = "/assets/bluegreen-globe.jpg";
 
 export const Route = createFileRoute("/")({
@@ -183,10 +184,10 @@ function Index() {
       </section>
 
       <section id="journey" className="journey-section cream-section">
-        <div className="journey-image reveal">
-          <img src={riverImage} alt="Sketch of a traveller rowing a boat along a sunlit forest river" loading="lazy" width={1920} height={1080} />
+        <div className="journey-image">
+          <img src={riverImage} alt="Centered white line drawing of a person rowing on a bright turquoise forest lake" loading="lazy" width={928} height={1152} />
         </div>
-        <div className="journey-copy reveal">
+        <div className="journey-copy">
           <h2>Environmental<br /><em>Journey</em></h2>
           <p className="lead">Learning that transforms knowledge into new ways of thinking, acting, and living.</p>
           <p>BlueGreen edutainment journey explores different environmental aspects, from climate change to the circular economy, mapping different layers of intervention that help transform the future, build resilience, and reveal sustainable solutions.</p>
