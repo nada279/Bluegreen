@@ -127,14 +127,14 @@ function MindMap() {
         <text className="topic-tag" x="870" y="326">INNOVATE · CREATE · SCALE</text>
       </g>
       <g className="infinity-topic topic-upcycling" tabIndex={0} role="button" aria-label="Upcycling and Recycling: Reduce, Reuse, Reimagine">
-        <g className="topic-icon" transform="translate(330 425)"><path d="M-22-33 0-48l18 31M0-48l8 18m10 13 22 38-18 28M40 21 20 19M22 49h-47l-18-31m18 31 10-17M-43 18l22-38h37m-37 0 11 15M18 20c4-27 20-40 39-43-1 25-15 42-39 43Zm0 0L48-13" /></g>
-        <text className="topic-title" x="330" y="490"><tspan x="330">Upcycling &amp;</tspan><tspan x="330" dy="30">Recycling</tspan></text>
-        <text className="topic-tag" x="330" y="566">REDUCE · REUSE · REIMAGINE</text>
+        <g className="topic-icon" transform="translate(330 405)"><path d="M-22-33 0-48l18 31M0-48l8 18m10 13 22 38-18 28M40 21 20 19M22 49h-47l-18-31m18 31 10-17M-43 18l22-38h37m-37 0 11 15M18 20c4-27 20-40 39-43-1 25-15 42-39 43Zm0 0L48-13" /></g>
+        <text className="topic-title" x="330" y="472"><tspan x="330">Upcycling &amp;</tspan><tspan x="330" dy="30">Recycling</tspan></text>
+        <text className="topic-tag" x="330" y="533">REDUCE · REUSE · REIMAGINE</text>
       </g>
       <g className="infinity-topic topic-products" tabIndex={0} role="button" aria-label="Environmental Products: Design, Produce, Impact">
-        <g className="topic-icon" transform="translate(870 425)"><path d="M-48-14 0-35l48 21L0 8Zm0 0v50L0 58l48-22v-50M0 8v50M-48-14l22 17L0-17 26 3l22-17M0-35c0 0-20-21-18-40 20 3 26 22 18 40Zm0 0c3-22 20-38 40-39-2 23-19 37-40 39Z" /></g>
-        <text className="topic-title" x="870" y="490"><tspan x="870">Environmental</tspan><tspan x="870" dy="30">Products</tspan></text>
-        <text className="topic-tag" x="870" y="566">DESIGN · PRODUCE · IMPACT</text>
+        <g className="topic-icon" transform="translate(870 405)"><path d="M-48-14 0-35l48 21L0 8Zm0 0v50L0 58l48-22v-50M0 8v50M-48-14l22 17L0-17 26 3l22-17M0-35c0 0-20-21-18-40 20 3 26 22 18 40Zm0 0c3-22 20-38 40-39-2 23-19 37-40 39Z" /></g>
+        <text className="topic-title" x="870" y="472"><tspan x="870">Environmental</tspan><tspan x="870" dy="30">Products</tspan></text>
+        <text className="topic-tag" x="870" y="533">DESIGN · PRODUCE · IMPACT</text>
       </g>
 
       <g className="infinity-center">
