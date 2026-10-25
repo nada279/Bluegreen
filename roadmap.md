@@ -9,3 +9,4 @@
 - [x] Shift the Environmental Journey heading slightly left of the body copy.
 - [x] Put the bright seedling photo in Planet Story with the copy aligned left above it.
 - [x] Fit the new Journey lake image to the left panel with the figure centered and the right text panel stationary and aligned.
+- [ ] Keep Journey panels aligned without excess vertical travel and place the bottom diagram labels clear of the drawing paths.
